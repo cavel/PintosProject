@@ -1,2 +1,32 @@
 Linux Server for Pintos Project
 
+Set UP 
+
+1. Linux install - 32bit version
+
+2. gcc-4.4 install  - sudo apt-get install gcc-4.4
+
+3. bochs install
+--sudo apt-get install wget
+--wget https://sourceforge.net/projects/bochs/files/bochs/2.6.2/bochs-2.6.2.tar.gz/download
+--tar xvzf download
+--cd ./configure --enable-gdb-stub --with-nogui
+--make
+--sudo make install
+
+4. Pintos install and Set Up
+--cd /home/<pc name>
+--wget http://www.stanford.edu/class/cs140/projects/pintos/pintos.tar.gz
+--tar xvzf pintos.tar.gz
+--vi ~/.bashrc
+--last line -> export PATH="$PATH:/home/<user-name>/pintos/src/utils"
+--source ~/.bashrc
+--cd /home/<pc name>/pintos/src/utils
+--make
+
+5. code compile
+--cd /home/<pc name>/pintos/src/threads/build
+--make check => if pass number is seven, it's a success.
+
+6. excute
+-- pintos -q run alarm-mutiple
